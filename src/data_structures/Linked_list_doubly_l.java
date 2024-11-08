@@ -18,7 +18,7 @@ package data_structures;
 import java.util.Iterator;
 
 // Doubly
-public class Linked_list_l<T> implements Iterable<T> {
+public class Linked_list_doubly_l<T> implements Iterable<T> {
     private int size = 0;
     private Node<T> head = null, tail = null;
 

@@ -1,9 +1,9 @@
 package data_structures;
 
-public class Linked_list_m {
+public class Linked_list_doubly_m {
     public static void main(String[] args) {
         // Create an instance of Linked_list_l
-        Linked_list_l<Integer> list = new Linked_list_l<>();
+        Linked_list_doubly_l<Integer> list = new Linked_list_doubly_l<>();
 
         // Add elements to the list
         list.add(10);
