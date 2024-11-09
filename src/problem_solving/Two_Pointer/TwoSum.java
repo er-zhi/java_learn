@@ -7,16 +7,16 @@ class TwoSum {
             throw new IllegalArgumentException("Input array must have at least two elements.");
         }
 
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> mapRestIndex = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             int rest = target - nums[i];
 
-            if (map.containsKey(rest)) { // bingo!!!
-                return new int[]{map.get(rest), i};
+            if (mapRestIndex.containsKey(rest)) { // bingo!!!
+                return new int[]{mapRestIndex.get(rest), i};
             }
 
-            map.put(nums[i], i);
+            mapRestIndex.put(nums[i], i);
         }
 
         throw new IllegalArgumentException("No two sum solution exists.");

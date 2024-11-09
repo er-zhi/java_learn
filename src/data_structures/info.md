@@ -2,6 +2,7 @@ Linked List
 * Doubly Linked List
 * Stack
 * Queue
+Deque
 * BST (binary search tree)
 Recursive BST
 Tree Traversal (BST)
