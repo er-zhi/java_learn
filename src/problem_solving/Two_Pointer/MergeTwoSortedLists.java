@@ -9,7 +9,6 @@ package problem_solving.Two_Pointer;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-
 public class MergeTwoSortedLists {
 
     // Definition for singly-linked list.
@@ -106,7 +105,8 @@ public class MergeTwoSortedLists {
 /*
 Theory and Explanation
 Problem Overview
-We are tasked with merging two sorted singly-linked lists, list1 and list2, into one sorted linked list. The goal is to create a new list that contains all the nodes from list1 and list2 in ascending order.
+We are tasked with merging two sorted singly-linked lists, list1 and list2, into one
+sorted linked list. The goal is to create a new list that contains all the nodes from list1 and list2 in ascending order.
 
 Approach
 To solve this problem efficiently, we use the Two Pointers Technique, which involves iterating over both lists simultaneously:

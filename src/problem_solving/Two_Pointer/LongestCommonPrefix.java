@@ -12,17 +12,17 @@ class LongestCommonPrefix {
         while (maxPrefLeng > 0) {
             if (strs[cursor].length() < maxPrefLeng) {
                 maxPrefLeng = strs[cursor].length();
-                prefix = strs[0].substring(0, maxPrefLeng); // Fixed to substring for accurate trimming
+                prefix = strs[0].substring(0, maxPrefLeng);
             }
 
-            if (strs[cursor].startsWith(prefix)) { // Corrected startsWith logic
+            if (strs[cursor].startsWith(prefix)) {
                 cursor++;
                 if (cursor == strs.length) {
                     return prefix;
                 }
             } else {
-                cursor = 1;
-                prefix = strs[0].substring(0, --maxPrefLeng); // Correct substring usage
+                cursor--; // step back
+                prefix = strs[0].substring(0, --maxPrefLeng);
             }
         }
 

@@ -1,4 +1,4 @@
-package problem_solving.Two_Pointer;
+package problem_solving.hashMap;
 import java.util.*;
 
 class TwoSum {

@@ -13,7 +13,7 @@ public class Array_l<T> implements Iterable<T> {
 
     private T[] arr;
     private int len = 0;
-    private int capacity = 0;
+    private int capacity;
 
     public Array_l() {
         this(16);
