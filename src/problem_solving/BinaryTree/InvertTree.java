@@ -1,4 +1,4 @@
-package problem_solving.recursive;
+package problem_solving.BinaryTree;
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
