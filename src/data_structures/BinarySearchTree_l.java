@@ -34,6 +34,51 @@ public class BinarySearchTree_l<T extends Comparable<T>> {
 
     private Node root;
 
+    public boolean insert(T value) {
+        Node newNode = new Node(value);
+        if (root == null) {
+            root = newNode;
+            return true;
+        }
+        Node temp = root;
+        while (true) {
+            int comparison = temp.data.compareTo((T) value);
+
+            if (comparison == 0) return false;
+            if (comparison < 0) {
+                if (temp.left == null) {
+                    temp.left = newNode;
+                    return true;
+                }
+                temp = temp.left;
+            } else {
+                if (temp.right == null) {
+                    temp.right = newNode;
+                    return true;
+                }
+                temp = temp.right;
+            }
+        }
+    }
+
+    public boolean contains1(T value) {
+        Node temp = root;
+
+
+        while(temp != null) {
+            int comparison = temp.data.compareTo((T) value);
+            if(comparison == 0) return true;
+
+            else if (comparison < 0) {
+                temp = temp.right;
+            } else {
+                temp = temp.left;
+            }
+        }
+
+        return false;
+    }
+
     // Add a new element to the tree
     public void add(T value) {
         root = addRecursive(root, value);
