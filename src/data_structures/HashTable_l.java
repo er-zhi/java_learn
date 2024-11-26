@@ -17,7 +17,7 @@ public class HashTable_l {
         }
     }
 
-    public HashTable() {
+    public HashTable_l() {
         dataMap = new Node[size];
     }
 

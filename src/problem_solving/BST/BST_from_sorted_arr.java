@@ -1,6 +1,5 @@
 package problem_solving.BST;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class BST_from_sorted_arr {
 
@@ -16,6 +15,22 @@ public class BST_from_sorted_arr {
         }
     }
 
+    public ArrayList<Integer> BFS() {
+        Node currentNode = root;
+        Queue<Node> queue = new LinkedList<>();
+        ArrayList<Integer> result =  new ArrayList<>();
+        queue.add(currentNode);
+
+        while(!queue.isEmpty()) {
+            currentNode = queue.remove();
+            result.add(currentNode.value);
+            if(currentNode.left != null) queue.add(currentNode.left);
+            if(currentNode.right != null) queue.add(currentNode.right);
+        }
+
+        return result;
+    }
+
     public void sortedArrayToBST(int[] nums) {
         this.root = sortedArrayToBST(nums, 0, nums.length - 1);
     }
@@ -27,6 +42,20 @@ public class BST_from_sorted_arr {
         Node node = new Node(nums[mid]);
         node.left = sortedArrayToBST(nums, left, mid -1);
         node.right = sortedArrayToBST(nums, mid +1, right);
+
+        return node;
+    }
+
+    public void invert() {
+        root = invertTree(root);
+    }
+
+    private Node invertTree(Node node) {
+        if (node == null) return null;
+
+        Node temp = invertTree(node.left);
+        node.left = invertTree(node.right);
+        node.right = temp;
 
         return node;
     }
